@@ -1,0 +1,22 @@
+{% extends 'AppCoder/base.html' %}
+{% load static %}
+
+{% block tituloPagina %}
+Insripción - AppCoder
+{% endblock %}
+
+{% block contenidoPagina %}
+
+<h2>Realizar nueva inscripción</h2>
+
+<form action="" method="post">
+    {% csrf_token %}
+
+    <!-- <p>Deporte: <input type="text" name="deporte" id=""></p>
+    <p>Precio: <input type="number" name="precio" id="" min="0"></p>-->
+    {{ form.as_p }}
+
+    <input type="submit" value="Inscribir"> 
+</form>
+
+{% endblock %}

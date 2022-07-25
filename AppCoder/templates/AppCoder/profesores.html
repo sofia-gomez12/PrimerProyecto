@@ -1,0 +1,17 @@
+{% extends 'AppCoder/base.html' %}
+{% load static %}
+
+{% block tituloPagina %}
+Profesores - AppCoder
+{% endblock %}
+
+{% block contenidoPagina %}
+
+    <section class="row gx-4 justify-content-center">
+        Los profesores son:
+        {% for profesor in profesores %}
+        <li>{{profesor.nombre}} {{profesor.apellido}}</li>
+        {% endfor %}
+    </section>
+
+{% endblock %}

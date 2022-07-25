@@ -1,0 +1,15 @@
+{% extends 'AppCoder/base.html' %}
+{% load static %}
+
+{% block tituloPagina %}
+Disciplinas Deportivas - AppCoder
+{% endblock %}
+
+{% block contenidoPagina %}
+    <section class="row gx-4 justify-content-center">
+        Los deportes son:
+        {% for deporte in deportes %}
+        <li>{{deporte.nombre}}</li>
+        {% endfor %}
+    </section>
+{% endblock %}
